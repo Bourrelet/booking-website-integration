@@ -73,18 +73,69 @@ a {
 }
 
 /****** Hebergements ***********/
+
+/****** Les px sur figma ne sont pas fiables ***********/
+/****** Need trouver une solution -> Slack ***********/
+
 .hebergements {
     width: 65%;
 }
 
-.hebergements-cards { /* en cours de bidouille */
+
+.hebergements-cards { /* container articles wrap */
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
 }
 
-.hebergements-cards img{ /* en cours de bidouille */
-    height: 124px; /* laisser en px ? */
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.hebergements-cards .card { /* Container pour chaque article-lien */
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+    width: 240px;
+    padding-bottom: 10px;
+    
 }
+
+.hebergements-cards img{ /* Images de hebergements */
+    height: 124px; /* laisser en px ? */
+    
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    width: 100%;
+    /* padding-top: 4px; */
+    padding : 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -97,7 +148,7 @@ a {
     align-items: center;
 }
 
-.populaires-cards .card {
+.populaires-cards .card { /* article-lien */
     display: flex;
     margin-top: 33px;
 }
@@ -129,6 +180,51 @@ a {
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
+}
+
+/****** Activites ***********/
+
+.activities-container { /* body section */
+
+    padding: 30px;
+    
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.activities-cards { /* container a activites */
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;  
+    
+}
+
+.activities-cards a {  /* activites */
+    width: 100%;
+    padding: 0px;
+    margin: 15px;
+    
+}
+
+.activities-cards .card{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 33px;
+}
+.activities-cards img {
+    height: 380px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+.activities-cards .card-title {
+    padding-left: 15px;
 }
 
 
