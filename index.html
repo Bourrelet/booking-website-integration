@@ -39,16 +39,24 @@
                 </section>
                 <section class="research-input-container">  
                     <form class="research-form" method="get" action="anyURL">
-
-                        <label class="research-label" for="destination"><i class="fa-solid fa-location-dot"></i></label>                
-                        <input class="research-input" type="text" id="destination" name="searching"  placeholder="Marseille, France">                
-                        <button class="research-button"> Rechercher </button> 
+                        <div class="research-form-container">
+                            <span>
+                                <label class="research-label" for="destination">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </label>     
+                            </span>           
+                            <input class="research-input" type="text" id="destination" name="searching"  value="Marseille, France">                
+                            <button class="research-button"> Rechercher </button> 
+                        </div>
 
                     </form>                 
                 </section>
 
-                <section class="research-info-container">                    
-                    <i class="fa-solid fa-info" aria-hidden="true"></i>
+                <section class="research-info-container"> 
+                    <div class="info-logo-border">
+                        <i class="fa-solid fa-info" aria-hidden="true"></i>
+                    </div>                 
+                    
                     <p class="info-txt">Plus de 500 logements sont disponibles dans cette ville</p>
                 </section>
 

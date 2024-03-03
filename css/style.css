@@ -58,6 +58,119 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+/****** Research ***********/
+
+.roof-research-container {
+    margin-top: 33px;
+    margin-bottom: 33px;
+}
+
+.research-input-container .research-form-container{
+ display: flex;
+ gap:0px;
+ justify-content: flex-start;
+ align-items: center;
+ box-sizing: content-box;
+ height: 100%;
+
+
+}
+.research-input-container span{ /* Span container -> permet de modifier librement le logo */
+    border: 1px solid var(--filter-bg-color);
+    box-sizing: content-box;
+    background-color: var(--filter-bg-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
+    height: 25px;
+    padding: 5px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.research-input-container i{ /* logo */
+    text-decoration: none;
+    color: black;
+    font-size: 0.75em;
+    
+}
+
+.research-input-container .research-input{
+    margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
+    border: 1px solid var(--filter-bg-color);
+    box-sizing: content-box; /* permet de superposer les bordures  */
+    height: 25px;
+    padding: 5px;
+    position: relative; /* pour deplacement vers la gauche */
+    right : 1px;
+    font-size: 18px;
+    font-weight: bold ;
+    color: black;
+}
+.research-input-container .research-button{
+    margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
+    border: 1px solid var(--main-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--main-color);
+    color:white;
+    box-sizing: content-box; /* permet de superposer les bordures  */
+    height: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    right: 2px; /* pour deplacement vers la gauche */
+    font-size: 18px;
+    font-weight: bold ;
+}
+
+
+
+.research-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.research-info-container i { /* le logo */
+
+    margin:auto;
+    font-size: 0.5em;
+}
+
+.info-logo-border{ /* container creer pour la bordure. Permet de modifier librement le logo*/
+    display: flex; 
+    border: 1px solid grey;
+    width: 20px;
+    min-height: 20px; 
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+.research-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.research-filter-container .filter-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px grey;
+    border-radius: 20px;
+    
+    padding: 0px 15px;
+    gap: 10px;
+}
+
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
