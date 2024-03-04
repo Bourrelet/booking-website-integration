@@ -1,7 +1,10 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
 }
+
 
 :root {
     --main-color: #0065FC;
@@ -58,6 +61,39 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
+/* header-container */
+
+.header-container  { /* */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+} 
+
+.header-container ul{    /* liens */
+    display: flex;
+    gap: 50px;
+    color: black;
+}
+
+.header-container nav{     /* container navigation */
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.header-container img{ /* logo */
+    height: 25px;
+    margin: auto;
+    margin-left: 0px;
+    
+    
+}
+
+
 /****** Research ***********/
 
 .roof-research-container {
@@ -340,6 +376,28 @@ a {
     padding-left: 15px;
 }
 
+/* footer-container */
+
+.footer-container {
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between; 
+    position: relative;   
+
+}
+.footer-container section {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-left: 20px;
+
+}
+
+.footer-container li {
+    position: relative;
+    right: 2.5em; /* a cause de la puce */
+    margin: 15px 0;
+}
 
 
 
