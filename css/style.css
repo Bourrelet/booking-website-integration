@@ -25,6 +25,7 @@ body {
     justify-content: center; /* On pourrait pas juste mettre margin auto sur main-container? */
     margin-top: 2px;
     margin-bottom: 0px;
+
 }
 
 .main-container {  /* se justifie en cas d'ecran large. */
@@ -40,9 +41,12 @@ a {
     cursor: pointer  /* modif par eva */
 }
 
-.section-title {
-    margin: 0; /* surement pour pq yq une marge par defaut sur les titres*/
-    font-size: 22px;
+
+
+
+.section-title { 
+    margin: 0; /*surement pour pq yq une marge par defaut sur les titres */
+    font-size: 22px; 
 }
 
 .card {
@@ -73,7 +77,7 @@ a {
 .header-container  { /* */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
 } 
 
 .header-container ul{    /* liens */
@@ -113,8 +117,8 @@ a {
 /****** Research ***********/
 
 .roof-research-container {
-    margin-top: 33px;
-    margin-bottom: 33px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .research-input-container .research-form-container{
@@ -145,7 +149,7 @@ a {
 .research-input-container i{ /* logo */
     text-decoration: none;
     color: black;
-    font-size: 0.75em;
+    font-size: 0.75em !important;
     
 }
 
@@ -190,7 +194,7 @@ a {
 .research-info-container i { /* le logo */
 
     margin:auto;
-    font-size: 0.5em;
+    font-size: 0.5em !important;
 }
 
 .info-logo-border{ /* container creer pour la bordure. Permet de modifier librement le logo*/
@@ -222,8 +226,7 @@ a {
     justify-content: space-around;
     align-items: center;
     border: solid 1px grey;
-    border-radius: 20px;
-    
+    border-radius: 20px;    
     padding: 0px 15px;
     gap: 10px;
 }
@@ -321,7 +324,7 @@ a {
 
 .populaires-cards .card { /* article-lien */
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -384,7 +387,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 .activities-cards img {
     height: 380px;
