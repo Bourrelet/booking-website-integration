@@ -23,8 +23,7 @@ ul {
 body {
     display: flex;
     justify-content: center; /* On pourrait pas juste mettre margin auto sur main-container? */
-    margin-top: 2px;
-    margin-bottom: 0px;
+    margin: 2px 0px 0px 0px;
 
 }
 
@@ -41,13 +40,18 @@ a {
     cursor: pointer  /* modif par eva */
 }
 
-
-
-
 .section-title { 
     margin: 0; /*surement pour pq yq une marge par defaut sur les titres */
     font-size: 22px; 
 }
+
+.section-subtitle { /* Need ajuster les marges individuellement*/
+
+    font-size: 18px; 
+    font-weight: bold;
+    text-align: left;
+}
+
 
 .card {
     background-color: white;
@@ -82,11 +86,11 @@ a {
 
 .header-container ul{    /* liens */
     display: flex;
-    gap: 50px;
+    gap: 50px; /*Distance Figma*/
     color: black;
 }
 
-.header-container nav{     /* container navigation */
+.header-nav{     /* container navigation */
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -96,7 +100,7 @@ a {
     
 }
 
-.header-container nav a:hover {     /* hover */
+.header-nav a:hover {     /* hover */
     color : rgb(1, 203, 253);
     border-top: 10px solid rgb(1, 203, 253) !important; 
     padding-top: 16px; 
@@ -104,76 +108,76 @@ a {
     
 }
 
-
-.header-container img{ /* logo */
+.header-booki-logo{ 
     height: 25px;
     margin: auto;
     margin-left: 0px;
-    
-    
 }
 
 
 /****** Research ***********/
 
-.roof-research-container {
-    margin-top: 35px;
+.research { /* FlexBoite de la partie recherche*/
+    margin-top: 30px;
     margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+}
+    /****** Texte ***********/
+
+.research-txt-container p {
+    margin: 8px 0px 0px 0px;
 }
 
-.research-input-container .research-form-container{
+    /****** Form ***********/
+
+.research-form-container{ /* reprendre les marges et dimensions*/
  display: flex;
- gap:0px;
- justify-content: flex-start;
- align-items: center;
- box-sizing: content-box;
- height: 100%;
-
 
 }
-.research-input-container span{ /* Span container -> permet de modifier librement le logo */
+.research .form-gps-logo-box{ /* Span container -> permet de modifier librement le logo */
     border: 1px solid var(--filter-bg-color);
-    box-sizing: content-box;
     background-color: var(--filter-bg-color);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;    
-    height: 25px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;    
+    height: 49px;
     padding: 5px;
-    width: 15px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.research-input-container i{ /* logo */
+.research .form-gps-logo-box i{ /* logo */
     text-decoration: none;
     color: black;
-    font-size: 0.75em !important;
-    
+    font-size: 0.75em !important;    
 }
 
-.research-input-container .research-input{
+.research .form-input{
     margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
     border: 1px solid var(--filter-bg-color);
     box-sizing: content-box; /* permet de superposer les bordures  */
-    height: 25px;
+    height: 49px;
     padding: 5px;
     position: relative; /* pour deplacement vers la gauche */
     right : 1px;
     font-size: 18px;
     font-weight: bold ;
     color: black;
+    text-align: center;
 }
-.research-input-container .research-button{
+.research .form-button{
     margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
     border: 1px solid var(--main-color);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: var(--main-color);
     color:white;
     box-sizing: content-box; /* permet de superposer les bordures  */
-    height: 25px;
+    height: 49px;
+    width: 100px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -183,21 +187,15 @@ a {
     font-weight: bold ;
 }
 
-
+    /****** Info ***********/
 
 .research-info-container {
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 10px 
 }
 
-.research-info-container i { /* le logo */
-
-    margin:auto;
-    font-size: 0.5em !important;
-}
-
-.info-logo-border{ /* container creer pour la bordure. Permet de modifier librement le logo*/
+.info-logo-border{ /* Cadre du logo info */
     display: flex; 
     border: 1px solid grey;
     width: 20px;
@@ -207,28 +205,44 @@ a {
     border-radius: 50%;
 }
 
+.info-logo-border i { /* Le logo info */
+    margin:auto;
+    font-size: 0.5em !important;
+}
+
+    /****** Filter ***********/
 
 .research-filter-container {
     display: flex;
     align-items: center;
     gap: 15px;
-    
+    height: 50px;
 }
 
-.research-filter-container div:hover {
+.filter-link:hover {
     background-color: deepskyblue;
-
-    
+    cursor: pointer;
 }
 
-.research-filter-container .filter-link {
+.filter-link {
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: solid 1px grey;
-    border-radius: 20px;    
+    border-radius: 25px;    
     padding: 0px 15px;
     gap: 10px;
+}
+
+.filter-title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.filter-txt {
+    font-weight: bold;
+    font-size: 17px;
+    text-align: left;    
 }
 
 
@@ -246,48 +260,43 @@ a {
     box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
+.card-prices {
+    margin: 0;
+}
 
-/****** Les px sur figma ne sont pas fiables ***********/
-/****** Need trouver une solution -> Slack ***********/
+.card-rating {
+    margin-bottom: 5px;
+}
+
+
+/****** Hebergements ***********/
 
 .hebergements {
     width: 65%;
 }
 
 
-.hebergements-cards { /* container articles wrap */
+.hebergements-cardbox { /* container articles wrap */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-    
 }
 
-
-.hebergements-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} 
-
-.hebergements-cards .card { /* Container pour chaque article-lien */
+.hebergements-cardbox .card { /* Container pour chaque article-lien */
     display: flex;
     flex-direction: column;
     margin-top: 33px;
     width: 240px;
     padding-bottom: 10px;
-    
 }
 
-.hebergements-cards img{ /* Images de hebergements */
-    height: 124px; /* laisser en px ? */
-    
+.hebergements-cardbox img{ /* Images de hebergements */
+    height: 124px;    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.hebergements-cards .card-content {
+.hebergements-cardbox .card-content {
     width: 100%;
     /* padding-top: 4px; */
     padding : 0px 15px;
@@ -297,17 +306,9 @@ a {
     box-sizing: border-box;
 }
 
-.hebergements-cards .card-title {
+.hebergements-cardbox .card-title {
     margin-top: 4px;
     margin-bottom: 4px;
-}
-
-.hebergements-cards .card-subtitle {
-    margin: 0;
-}
-
-.hebergements-cards .card-rating {
-    margin-bottom: 5px;
 }
 
 
@@ -315,26 +316,31 @@ a {
 .populaires {
     width: 32%;
 }
+.populaires-cardbox {  
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
 
-.populaires-title {
+.populaires-title-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.populaires-cards .card { /* article-lien */
+.populaires-cardbox .card { /* Le texte a cote de l'img */
     display: flex;
-    margin-top: 30px;
 }
 
-.populaires-cards img {
+.populaires-cardbox img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.populaires-cardbox .card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
@@ -343,62 +349,54 @@ a {
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.populaires-cardbox .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
-}
-
-.populaires-cards .card-rating {
-    margin-bottom: 5px;
-}
-
 /****** Activites ***********/
 
-.activities-container { /* body section */
-
-    padding: 30px;
-    
-    box-sizing: border-box;
-    width: 100%;
+.activities-container { 
+    padding: 30px;    
+    box-sizing: border-box; /* useless ? */
+    width: 100%; /* useless ? */
 }
 
-.activities-cards { /* container a activites */
+.activities-cardbox { 
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;  
-    
+    margin: 30px 0px;
+    padding: 0px;      
 }
 
-.activities-cards a {  /* activites */
+.activities-cardbox a {  
     width: 100%;
     padding: 0px;
-    margin: 15px;
-    
+    margin: 0px 15px; /* Essayer d'utiliser un gap eventuellement*/
+}
+.activities-cardbox a:first-of-type {  
+    margin-left: 0px;
+}
+.activities-cardbox a:last-of-type {  
+    margin-right: 0px; 
 }
 
-.activities-cards .card{
+.activities-cardbox .card{
     padding: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
 }
-.activities-cards img {
+.activities-cardbox img {
     height: 380px;
     width: 100%;
     border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    
+    border-top-right-radius: 20px;    
 }
 
-.activities-cards .card-title {
-    padding-left: 15px;
+.activities-cardbox .card-title {
+    margin : 20px;
 }
 
 /* footer-container */
@@ -442,21 +440,21 @@ a {
         margin-top: 50px;
     }
 
-    .populaires-cards {
+    .populaires-cardbox {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .populaires-cards a {
+    .populaires-cardbox a {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
+    .populaires-cardbox .card-title {
         font-size: 14px;
     }
 
-    .populaires-cards .card-subtitle {
+    .populaires-cardbox .card-prices {
         font-size: 13px;
     }
 }
