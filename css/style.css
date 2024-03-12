@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+ul {
+    padding-inline-start: 0px;
+}
+
 
 :root {
     --main-color: #0065FC;
@@ -19,6 +23,8 @@
 body {
     display: flex;
     justify-content: center; /* On pourrait pas juste mettre margin auto sur main-container? */
+    margin-top: 2px;
+    margin-bottom: 0px;
 }
 
 .main-container {  /* se justifie en cas d'ecran large. */
@@ -68,7 +74,6 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
-    top: 0px; /* Est ce que ca marche ? */
 } 
 
 .header-container ul{    /* liens */
@@ -83,13 +88,15 @@ a {
     flex-direction: row;
     justify-content: end;
     align-items: center;
+    ;
     
 }
 
-.header-container a:hover {     /* hover */
+.header-container nav a:hover {     /* hover */
     color : rgb(1, 203, 253);
-    border-top: 1px solid rgb(1, 203, 253);
-    padding-top: 16px;
+    border-top: 10px solid rgb(1, 203, 253) !important; 
+    padding-top: 16px; 
+    
     
 }
 
@@ -409,8 +416,6 @@ a {
 }
 
 .footer-container li {
-    position: relative;
-    right: 2.5em; /* a cause de la puce */
     margin: 15px 0;
 }
 
