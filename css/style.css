@@ -89,7 +89,7 @@ a {
 .header-booki-logo-box {
     width: 12.01%; /* (161/(1440-100)*100) body prend 100 de padding */
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     box-sizing: border-box; 
 }
