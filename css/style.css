@@ -50,6 +50,7 @@ a {
     font-size: 18px; 
     font-weight: bold;
     text-align: left;
+    margin: 0px;
 }
 
 
@@ -102,7 +103,7 @@ a {
 
 .header-nav a:hover {     /* hover */
     color : rgb(1, 203, 253);
-    border-top: 10px solid rgb(1, 203, 253) !important; 
+    border-top: 3px solid var(--main-color) !important; 
     padding-top: 16px; 
     
     
@@ -118,7 +119,6 @@ a {
 /****** Research ***********/
 
 .research { /* FlexBoite de la partie recherche*/
-    margin-top: 30px;
     margin-bottom: 35px;
     display: flex;
     flex-direction: column;
@@ -133,58 +133,50 @@ a {
     /****** Form ***********/
 
 .research-form-container{ /* reprendre les marges et dimensions*/
- display: flex;
+    display: flex;
 
 }
+
+.research .form {
+    font-size: 18px;
+    font-weight: bold;
+    height: 49px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .research .form-gps-logo-box{ /* Span container -> permet de modifier librement le logo */
-    border: 1px solid var(--filter-bg-color);
-    background-color: var(--filter-bg-color);
+    border: 1px solid var(--main-bg-color);
+    background-color: var(--main-bg-color);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;    
-    height: 49px;
-    padding: 5px;
-    width: 50px;
+    width: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .research .form-gps-logo-box i{ /* logo */
-    text-decoration: none;
-    color: black;
-    font-size: 0.75em !important;    
+    color: black;   
 }
 
 .research .form-input{
-    margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
-    border: 1px solid var(--filter-bg-color);
-    box-sizing: content-box; /* permet de superposer les bordures  */
-    height: 49px;
-    padding: 5px;
+    border: 1px solid var(--main-bg-color);
     position: relative; /* pour deplacement vers la gauche */
     right : 1px;
-    font-size: 18px;
-    font-weight: bold ;
     color: black;
-    text-align: center;
+    width: calc(377px - 182px);
 }
 .research .form-button{
-    margin: 0px; /* des fois qu'il y ait une valeur par defaut*/
     border: 1px solid var(--main-color);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: var(--main-color);
     color:white;
-    box-sizing: content-box; /* permet de superposer les bordures  */
-    height: 49px;
-    width: 100px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 132px;  
     position: relative;
-    right: 2px; /* vers la gauche par dessus la bordure */
-    font-size: 18px;
-    font-weight: bold ;
+    right: 2px; 
 }
 
     /****** Info ***********/
@@ -197,17 +189,17 @@ a {
 
 .info-logo-border{ /* Cadre du logo info */
     display: flex; 
-    border: 1px solid grey;
-    width: 20px;
-    min-height: 20px; 
-    min-width: 20px;
-    height: 20px;
+    border: 1px solid var(--filter-bg-color);
+    width: 24px;
+    min-height: 24px; 
+    min-width: 24px;
+    height: 24px;
     border-radius: 50%;
 }
 
 .info-logo-border i { /* Le logo info */
     margin:auto;
-    font-size: 0.5em !important;
+    font-size: 0.75em !important;
 }
 
     /****** Filter ***********/
@@ -217,21 +209,28 @@ a {
     align-items: center;
     gap: 15px;
     height: 50px;
+    box-sizing: border-box;
 }
 
 .filter-link:hover {
-    background-color: deepskyblue;
+    background-color: rgb(0, 101, 252, 0.15);
     cursor: pointer;
 }
+
+
 
 .filter-link {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: solid 1px grey;
+    border: solid 2px var(--main-bg-color);
     border-radius: 25px;    
     padding: 0px 15px;
     gap: 10px;
+}
+
+.filter-link i{
+ font-size: 1.25em;
 }
 
 .filter-title {
@@ -251,6 +250,7 @@ a {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 35px;
 }
 
 .hebergements-and-populaires section {
@@ -258,10 +258,11 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-}
+} /*Height 639; need -> 614*/
 
 .card-prices {
     margin: 0;
+    font-size: 14px;
 }
 
 .card-rating {
@@ -280,6 +281,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .hebergements-cardbox .card { /* Container pour chaque article-lien */
@@ -304,11 +306,12 @@ a {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    row-gap: 8px;
 }
 
 .hebergements-cardbox .card-title {
     margin-top: 4px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
 }
 
 
@@ -316,11 +319,11 @@ a {
 .populaires {
     width: 32%;
 }
-.populaires-cardbox {  
+.populaires-cardbox {  /*Probleme de justesse*/
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-top: 30px;
+    height: 100%;
+    justify-content: space-evenly;
 }
 
 .populaires-title-box {
@@ -357,9 +360,10 @@ a {
 /****** Activites ***********/
 
 .activities-container { 
-    padding: 30px;    
+    padding: 30px ;    
     box-sizing: border-box; /* useless ? */
     width: 100%; /* useless ? */
+    margin-bottom: 35px;
 }
 
 .activities-cardbox { 
@@ -367,19 +371,12 @@ a {
     justify-content: space-between;
     box-sizing: border-box;
     margin: 30px 0px;
-    padding: 0px;      
+    padding: 0px;
+    column-gap: 30px;      
 }
 
 .activities-cardbox a {  
     width: 100%;
-    padding: 0px;
-    margin: 0px 15px; /* Essayer d'utiliser un gap eventuellement*/
-}
-.activities-cardbox a:first-of-type {  
-    margin-left: 0px;
-}
-.activities-cardbox a:last-of-type {  
-    margin-right: 0px; 
 }
 
 .activities-cardbox .card{
@@ -413,7 +410,6 @@ a {
     flex-direction: column;
     width: 33%;
     margin-left: 20px;
-
 }
 
 .footer-container li {
