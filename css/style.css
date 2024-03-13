@@ -265,10 +265,6 @@ a {
     font-size: 14px;
 }
 
-.card-rating {
-    margin-bottom: 5px;
-}
-
 
 /****** Hebergements ***********/
 
@@ -284,18 +280,20 @@ a {
     margin-bottom: 30px;
 }
 
-.hebergements-cardbox .card { /* Container pour chaque article-lien */
+.hebergements-cardbox .card { /* Container : Il me manque 4px ... mystere */
     display: flex;
     flex-direction: column;
     margin-top: 33px;
     width: 240px;
-    padding-bottom: 10px;
+    padding: 0px 0px 15px 0px !important; 
 }
 
-.hebergements-cardbox img{ /* Images de hebergements */
-    height: 124px;    
+.hebergements-cardbox img{ /* Images parfaites                                          MM */
+    height: 114px;    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-sizing: border-box;
+    border: 5px white solid;
 }
 
 .hebergements-cardbox .card-content {
