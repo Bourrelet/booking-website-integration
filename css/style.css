@@ -276,20 +276,20 @@ a {
 .hebergements-cardbox { /* container articles wrap */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    margin-top: 30px;
     margin-bottom: 30px;
+    gap: 30px;
 }
 
 .hebergements-cardbox .card { /* Container : Il me manque 4px ... mystere */
     display: flex;
     flex-direction: column;
-    margin-top: 33px;
     width: 240px;
     padding: 0px 0px 15px 0px !important; 
 }
 
 .hebergements-cardbox img{ /* Images parfaites                                          MM */
-    height: 114px;    
+    height: 124px;    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-sizing: border-box;
@@ -311,6 +311,15 @@ a {
     margin-top: 4px;
     margin-bottom: 0px;
 }
+
+.hebergements-cardbox .card-rating { /* C'est a cause de ca qu'il me manquait mes 4pixels*/
+    height: 13px; /* Auto -> Zero ... ?*/
+    width: 83.88px; /*Obtenue via de fit-content section populaire*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 
 /****** Populaires ***********/
@@ -353,6 +362,10 @@ a {
 .populaires-cardbox .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+}
+
+.populaires-cardbox .card-rating {
+    width: fit-content; /* 83.88px */
 }
 
 /****** Activites ***********/
