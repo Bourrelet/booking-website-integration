@@ -83,37 +83,41 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-} 
-
-.header-container ul{    /* liens */
-    display: flex;
-    gap: 50px; /*Distance Figma*/
-    color: black;
+    padding: 15px 0px;
 }
 
-.header-nav{     /* container navigation */
-    width: 80%;
+.header-booki-logo-box {
+    width: 12.01%; /* (161/(1440-100)*100) body prend 100 de padding */
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    ;
-    
+    box-sizing: border-box; 
+}
+.header-booki-logo{ 
+    height: 19px;
+}
+
+.header-nav{    /* liens */
+    color: black;
+    width: 18.2%; /* (244/(1440-100)*100) body prend 100 de padding */
+}
+.header-nav ul{    /* liens */
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+    position: relative; 
+    top: -13px; /* Juste ce qu'il faut pour respecter Figma*/
 }
 
 .header-nav a:hover {     /* hover */
     color : rgb(1, 203, 253);
     border-top: 3px solid var(--main-color) !important; 
-    padding-top: 16px; 
+    padding-top: 16px; /* Definit la hauteur de la bordure top */
     
     
 }
 
-.header-booki-logo{ 
-    height: 25px;
-    margin: auto;
-    margin-left: 0px;
-}
+
 
 
 /****** Research ***********/
@@ -381,7 +385,7 @@ a {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 30px 0px;
+    margin-top: 30px;
     padding: 0px;
     column-gap: 30px;      
 }
@@ -413,7 +417,11 @@ a {
     background-color: var(--main-bg-color);
     display: flex;
     justify-content: space-between; 
-    position: relative;   
+    padding-top: 20px;
+    padding-bottom: 5px;    
+    position: relative; 
+    bottom:-2px;
+
 
 }
 .footer-container section {
