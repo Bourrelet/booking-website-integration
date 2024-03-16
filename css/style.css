@@ -100,6 +100,7 @@ a {
 .header-nav{    /* liens */
     color: black;
     width: 18.2%; /* (244/(1440-100)*100) body prend 100 de padding */
+    min-width: 244px;
 }
 .header-nav ul{    /* liens */
     display: flex;
@@ -283,13 +284,16 @@ a {
     margin-top: 30px;
     margin-bottom: 30px;
     gap: 30px;
+    justify-content: space-between;
 }
 
 .hebergements-cardbox .card { /* Container : Il me manque 4px ... mystere */
     display: flex;
     flex-direction: column;
-    width: 240px;
+    width: 16.667vw;
+    max-width: 240px;
     padding: 0px 0px 15px 0px !important; 
+    
 }
 
 .hebergements-cardbox img{ /* Images parfaites                                          MM */
@@ -298,11 +302,21 @@ a {
     border-top-right-radius: 20px;
     box-sizing: border-box;
     border: 5px white solid;
+    width: 100%;
 }
 
 .hebergements-cardbox .card-content {
     width: 100%;
-    /* padding-top: 4px; */
+    padding : 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    row-gap: 8px;
+}
+
+.hebergements-cardbox .card-details {
+    width: 100%;
     padding : 0px 15px;
     display: flex;
     flex-direction: column;
@@ -311,8 +325,9 @@ a {
     row-gap: 8px;
 }
 
+
 .hebergements-cardbox .card-title {
-    margin-top: 4px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -442,23 +457,44 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .research-filter-container {
+        flex-wrap: wrap;
+        height: fit-content;
+        column-gap: 15px;
+        row-gap: 0px;
+    }
+
+    .filter-title {
+        margin-right: 100%;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
-
     .hebergements {
         width: 100%;
+    }
+    .hebergements-cardbox .card{
+        width: 26.17vw;
+        max-width: 268px
     }
 
     .populaires {
         width: 100%;
         margin-top: 50px;
-    }
+    } 
 
     .populaires-cardbox {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .populaires-title-box {
+        margin-bottom: 20px;
     }
 
     .populaires-cardbox a {
@@ -472,7 +508,27 @@ a {
     .populaires-cardbox .card-prices {
         font-size: 13px;
     }
+
+    .activities-cardbox .card {
+        height: 100%;
+    }
+
+    .activities-cardbox {
+        height: 270px;
+    }
+
+    .activities-cardbox img {
+        height: 200px;
+    }
+
+    .activities-cardbox .card-title {
+        margin: auto;
+        padding: 0 19px;
+    }
 }
+
+
+
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
