@@ -283,15 +283,15 @@ a {
     flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 30px;
-    gap: 30px;
+    row-gap: 30px;
     justify-content: space-between;
 }
 
 .hebergements-cardbox .card { /* Container : Il me manque 4px ... mystere */
     display: flex;
     flex-direction: column;
-    width: 16.667vw;
-    max-width: 240px;
+    width: 31%;
+    max-width: 250px;
     padding: 0px 0px 15px 0px !important; 
     
 }
@@ -305,15 +305,6 @@ a {
     width: 100%;
 }
 
-.hebergements-cardbox .card-content {
-    width: 100%;
-    padding : 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    row-gap: 8px;
-}
 
 .hebergements-cardbox .card-details {
     width: 100%;
@@ -464,12 +455,12 @@ a {
         column-gap: 15px;
         row-gap: 0px;
     }
-
     .filter-title {
         margin-right: 100%;
         margin-bottom: 20px;
         margin-top: 0px;
     }
+
 
     .hebergements-and-populaires {
         flex-direction: column;
@@ -477,37 +468,41 @@ a {
     .hebergements {
         width: 100%;
     }
+
+    .hebergements-cardbox {
+        gap:unset;
+        row-gap: 30px;
+    }
+
     .hebergements-cardbox .card{
-        width: 26.17vw;
+        width: 31%;
         max-width: 268px
     }
+
+
 
     .populaires {
         width: 100%;
         margin-top: 50px;
     } 
-
     .populaires-cardbox {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-
     .populaires-title-box {
         margin-bottom: 20px;
     }
-
     .populaires-cardbox a {
         width: 30%;
     }
-
-    .populaires-cardbox .card-title {
+    .populaires-cardbox .card-title { /* ?Code de base ou modif aleatoire? */
         font-size: 14px;
     }
-
-    .populaires-cardbox .card-prices {
+    .populaires-cardbox .card-prices { /* ?Code de base ou modif aleatoire? */
         font-size: 13px;
     }
+
 
     .activities-cardbox .card {
         height: 100%;
