@@ -86,7 +86,6 @@ a {
 }
 
 .header-booki-logo-box {
-    width: 12.01%; 
     padding: 30px 50px 30px 0px;
     display: flex;
     justify-content: start;
@@ -106,20 +105,25 @@ a {
     display: flex;
     justify-content: space-between;
     margin: 0px;
+    height: 35px;
 }
 .header-nav li {
-    padding: 14px 0px;
     position: relative;
+    display: block;
+    height: 33px;
     top: 2px;
-    /* border: 2px solid red; */
+}
+
+.header-nav a {
+    display: block;
+    padding: 16px 0px 0px 0px;
 }
 
 .header-nav li:hover {     /* hover */
     color : rgb(1, 203, 253);
     position: relative;
-    top: unset;
-    border-top: 2px solid var(--main-color) !important; 
-    /* padding-top: 16px; Definit la hauteur de la bordure top  */
+    border-top: 2px solid var(--main-color) !important;
+    top: 0px;
 }
 
 
@@ -541,43 +545,37 @@ a {
     .header-container{
         flex-direction: column;
         align-items: center;
+        height: 115px;
     }
 
     .header-booki-logo-box {
-        margin: 30px;
+        margin: 30px auto;
+        padding: 0px;
     }
-
     .header-nav {
         width: 100%;
+        /* margin: unset;  useless*/ 
     }
 
-    .header-nav ul {
-        width: 100%;
-        position: relative;
-    }
     .header-nav li{
-        position:absolute;
         width: 50%;
-        text-align:center;
-        padding-bottom: 15px;
-        box-sizing: content-box;
+        height: 36px;
+        text-align: center;
+        position: unset;
+
     }
 
-    .header-nav li:nth-of-type(2){
-        right:0px;
+    .header-nav a{
+        padding: 0px 0px 17px 0px;
     }
 
-
-    .header-nav a:hover {
+    .header-nav li:hover {
         border-top: none !important;
-        padding-top: none !important;
+        border-bottom: 2px solid var(--main-color); 
+    
     
     }
 
-    .header-nav li:hover{
-        border-bottom: 2px solid var(--main-color) !important; 
-         /* Definit la hauteur de la bordure top */
-    }
 
 
 }
