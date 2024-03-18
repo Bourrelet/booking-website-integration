@@ -23,7 +23,7 @@ ul {
 body {
     display: flex;
     justify-content: center; /* On pourrait pas juste mettre margin auto sur main-container? */
-    margin: 2px 0px 0px 0px;
+    margin: 0px;
 
 }
 
@@ -83,11 +83,11 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    padding: 15px 0px;
 }
 
 .header-booki-logo-box {
-    width: 12.01%; /* (161/(1440-100)*100) body prend 100 de padding */
+    width: 12.01%; 
+    padding: 30px 50px 30px 0px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -105,18 +105,24 @@ a {
 .header-nav ul{    /* liens */
     display: flex;
     justify-content: space-between;
-    margin: 15px 0px;
-    position: relative; 
-    top: -13px; /* Juste ce qu'il faut pour respecter Figma*/
+    margin: 0px;
+}
+.header-nav li {
+    padding: 14px 0px;
+    position: relative;
+    top: 2px;
+    /* border: 2px solid red; */
 }
 
-.header-nav a:hover {     /* hover */
+.header-nav li:hover {     /* hover */
     color : rgb(1, 203, 253);
-    border-top: 3px solid var(--main-color) !important; 
-    padding-top: 16px; /* Definit la hauteur de la bordure top */
-    
-    
+    position: relative;
+    top: unset;
+    border-top: 2px solid var(--main-color) !important; 
+    /* padding-top: 16px; Definit la hauteur de la bordure top  */
 }
+
+
 
 
 
@@ -527,5 +533,51 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container {
+        padding: 0 20px;
+    }
+
+    .header-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-booki-logo-box {
+        margin: 30px;
+    }
+
+    .header-nav {
+        width: 100%;
+    }
+
+    .header-nav ul {
+        width: 100%;
+        position: relative;
+    }
+    .header-nav li{
+        position:absolute;
+        width: 50%;
+        text-align:center;
+        padding-bottom: 15px;
+        box-sizing: content-box;
+    }
+
+    .header-nav li:nth-of-type(2){
+        right:0px;
+    }
+
+
+    .header-nav a:hover {
+        border-top: none !important;
+        padding-top: none !important;
+    
+    }
+
+    .header-nav li:hover{
+        border-bottom: 2px solid var(--main-color) !important; 
+         /* Definit la hauteur de la bordure top */
+    }
+
+
 }
