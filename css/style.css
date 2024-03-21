@@ -614,11 +614,6 @@ a {
         margin: unset;
         text-align: left;        
     }
-    /* .filter-title::after {
-        content: " ";
-        display: block;
-        width: 37vw;
-    } */
 
     .filter-link {
         width: 42.27vw;
@@ -629,7 +624,7 @@ a {
 
 
 
-    /*Heb & Pop */
+    /*Heb - Pop & Act*/
 
     .cardbox {    
         flex-direction: column;
@@ -653,7 +648,7 @@ a {
         border-radius: 0px !important;
         position: relative;
         width: 100vw;
-        left: -20px;
+        left: -5.333vw;
         background-color: var(--main-bg-color) !important;
         padding: 30px 20px !important;
     }
@@ -673,7 +668,27 @@ a {
         padding: 30px 10px 65px 10px !important;
 
     }
+
+    .card-title {
+        margin: 0px !important;
+        padding: 20px 19px !important;
+        text-align: left !important;
+    }
    
+
+    /* footer*/
+
+    .footer-container {
+        flex-direction: column;
+        row-gap: 50px;
+        width: 100vw;
+        position: relative;
+        left: -5.333vw;
+    }
+
+    .footer-container section{
+        width: unset;
+    }
 
     
     
