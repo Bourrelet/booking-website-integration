@@ -22,12 +22,12 @@ ul {
 
 body {
     display: flex;
-    justify-content: center; /* On pourrait pas juste mettre margin auto sur main-container? */
+    justify-content: center; 
     margin: 0px;
 
 }
 
-.main-container {  /* se justifie en cas d'ecran large. */
+.main-container {  
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
@@ -35,17 +35,17 @@ body {
 }
 
 a {
-    color: inherit; /* Permet d'heriter la valeur par defaut?*/
+    color: inherit; 
     text-decoration: none;
-    cursor: pointer  /* modif par eva */
+    cursor: pointer  /* gratuit */
 }
 
 .section-title { 
-    margin: 0; /*surement pour pq yq une marge par defaut sur les titres */
+    margin: 0; /* opposition valeur par defaut? */
     font-size: 22px; 
 }
 
-.section-subtitle { /* Need ajuster les marges individuellement*/
+.section-subtitle { 
 
     font-size: 18px; 
     font-weight: bold;
@@ -58,11 +58,11 @@ a {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* handi-code ?*/
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Pourquoi filter ? */
 }
 
 .card img {
-    object-fit: cover;  /* j'ai fait plusieurs cours et j'ai jamais vrmt compris cmt ca marche*/
+    object-fit: cover; 
 }
 
 .card-title {
@@ -79,7 +79,7 @@ a {
 
 /* header-container */
 
-.header-container  { /* */
+.header-container  { 
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
@@ -96,12 +96,12 @@ a {
     height: 19px;
 }
 
-.header-nav{    /* liens */
+.header-nav{    
     color: black;
-    width: 18.2%; /* (244/(1440-100)*100) body prend 100 de padding */
+    width: 18.2%;
     min-width: 244px;
 }
-.header-nav ul{    /* liens */
+.header-nav ul{    
     display: flex;
     justify-content: space-between;
     margin: 0px;
@@ -119,7 +119,7 @@ a {
     padding: 16px 0px 0px 0px;
 }
 
-.header-nav li:hover {     /* hover */
+.header-nav li:hover {    
     color : rgb(1, 203, 253);
     position: relative;
     border-top: 2px solid var(--main-color) !important;
@@ -147,7 +147,7 @@ a {
 
     /****** Form ***********/
 
-.research-form-container{ /* reprendre les marges et dimensions*/
+.research-form-container{ 
     display: flex;
 
 }
@@ -161,7 +161,7 @@ a {
     text-align: center;
 }
 
-.research .form-gps-logo-box{ /* Span container -> permet de modifier librement le logo */
+.research .form-gps-logo-box{ /* Balise container a la place d'un display block */
     border: 1px solid var(--main-bg-color);
     background-color: var(--main-bg-color);
     border-top-left-radius: 15px;
@@ -178,7 +178,7 @@ a {
 
 .research .form-input{
     border: 1px solid var(--main-bg-color);
-    position: relative; /* pour deplacement vers la gauche */
+    position: relative; 
     right : 1px;
     color: black;
     width: calc(377px - 182px);
@@ -206,7 +206,7 @@ a {
     gap: 10px 
 }
 
-.info-logo-border{ /* Cadre du logo info */
+.info-logo-border{ /* Balise container a la place d'un display block */
     display: flex; 
     border: 1px solid var(--filter-bg-color);
     width: 24px;
@@ -277,7 +277,7 @@ a {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-} /*Height 639; need -> 614*/
+} 
 
 .card-prices {
     margin: 0;
@@ -301,7 +301,7 @@ a {
     justify-content: space-between;
 }
 
-.hebergements-cardbox .card { /* Container : Il me manque 4px ... mystere */
+.hebergements-cardbox .card { 
     display: flex;
     flex-direction: column;
     width: 31%;
@@ -310,7 +310,7 @@ a {
     
 }
 
-.hebergements-cardbox img{ /* Images parfaites                                          MM */
+.hebergements-cardbox img{                                      
     height: 124px;    
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -336,9 +336,9 @@ a {
     margin-bottom: 0px;
 }
 
-.hebergements-cardbox .card-rating { /* C'est a cause de ca qu'il me manquait mes 4pixels*/
-    height: 13px; /* Auto -> Zero ... ?*/
-    width: 83.88px; /*Obtenue via de fit-content section populaire*/
+.hebergements-cardbox .card-rating { 
+    height: 13px; /* 17 par defaut, cree un decallage avec la maquette */
+    width: 83.88px; /*Obtenue via fit-content sur rating de la section populaire*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -350,7 +350,7 @@ a {
 .populaires {
     width: 32%;
 }
-.populaires-cardbox {  /*Probleme de justesse*/
+.populaires-cardbox { 
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -363,7 +363,7 @@ a {
     align-items: center;
 }
 
-.populaires-cardbox .card { /* Le texte a cote de l'img */
+.populaires-cardbox .card { 
     display: flex;
 }
 
@@ -389,15 +389,15 @@ a {
 }
 
 .populaires-cardbox .card-rating {
-    width: fit-content; /* 83.88px */
+    width: fit-content; /* 83.88px -> Valeur reprise pour la section hebergement */
 }
 
 /****** Activites ***********/
 
 .activities { 
     padding: 30px ;    
-    box-sizing: border-box; /* useless ? */
-    width: 100%; /* useless ? */
+    box-sizing: border-box; 
+    width: 100%; 
     margin-bottom: 35px;
 }
 
@@ -464,7 +464,7 @@ a {
 @media (max-width: 1024px) {
 
     .main-container {
-        padding: 0 4.883VW;
+        padding: 0 4.883vw;
     }
 
     .research-filter-container {
