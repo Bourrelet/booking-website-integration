@@ -463,6 +463,10 @@ a {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
+    .main-container {
+        padding: 0 4.883VW;
+    }
+
     .research-filter-container {
         flex-wrap: wrap;
         height: fit-content;
@@ -510,12 +514,7 @@ a {
     .populaires-cardbox a {
         width: 30%;
     }
-    .populaires-cardbox .card-title { /* ?Code de base ou modif aleatoire? */
-        font-size: 14px;
-    }
-    .populaires-cardbox .card-prices { /* ?Code de base ou modif aleatoire? */
-        font-size: 13px;
-    }
+
 
 
     .activities-cardbox .card {
@@ -669,7 +668,7 @@ a {
 
     }
 
-    .card-title {
+    .activities .card-title {
         margin: 0px !important;
         padding: 20px 19px !important;
         text-align: left !important;
