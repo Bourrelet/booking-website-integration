@@ -385,6 +385,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 439px;
 }
 .activities-cardbox img {
     height: 380px;
@@ -393,7 +394,8 @@ a {
     border-top-right-radius: 20px;    
 }
 .activities-cardbox .card-title {
-    margin : 20px;
+    margin : auto;
+    text-align: center;
 }
 
 /* footer-container */
